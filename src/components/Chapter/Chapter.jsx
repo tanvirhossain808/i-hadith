@@ -3,11 +3,12 @@ import { useState } from "react";
 
 
 const Chapter = ({ range, number, title, isActive }) => {
-    console.log(range);
+
+    console.log(isActive, 'df');
     const [isRowActive, setIsRowAcitve] = useState(false)
     const [isHover, setIsHover] = useState(false)
     return (
-        <div className={`flex items-center gap-2 h-[100px] rounded-xl   w-full pl-3 ${isHover && "bg-[#EBFCF6]"} cursor-pointer`} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+        <div className={`flex items-center gap-2 h-[100px] rounded-xl   w-full pl-3 ${(isActive || isHover) && "bg-[#EBFCF6]"} cursor-pointer`} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
 
             <div className="relative" >
                 <h3 className={`text-xl ${(isActive || isHover) ? "text-white" : "text - gray - 400"}  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:text-lg font-medium`}>{number}</h3>

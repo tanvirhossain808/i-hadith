@@ -8,8 +8,8 @@ import Chapter from "../Chapter/Chapter";
 
 const Suchipatra = () => {
     const [isActive, setIsActive] = useState({
-        book: true,
-        chapter: false
+        book: false,
+        chapter: true
     })
     const { data: { books, chapter } } = useContext(dataProvider)
 
@@ -24,7 +24,7 @@ const Suchipatra = () => {
             </div>
             <div className="scrollOption px-3 py-3">
                 {
-                    isActive.book ? books.map((book) => <Book id={book.id} isActive={book.isActive} code={book.abvr_code} key={book.id} title={book.title} hadishNumber={book.number_of_hadis} />) : chapter.map((chapter) => <Chapter title={chapter.title} range={chapter.hadis_range} number={chapter.number} key={chapter.id} id={chapter.id} />)
+                    isActive.book ? books.map((book) => <Book id={book.id} isActive={book.isActive} code={book.abvr_code} key={book.id} title={book.title} hadishNumber={book.number_of_hadis} />) : chapter.map((chapter) => <Chapter title={chapter.title} range={chapter.hadis_range} isActive={chapter.isActive} number={chapter.number} key={chapter.id} id={chapter.id} />)
                 }
 
             </div>

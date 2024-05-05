@@ -17,7 +17,9 @@ const useGetChapterName = (name = 1) => {
                             ...pre,
                             chapter: data.map((book) => {
                                 return {
-                                    ...book, setIsActive: false
+                                    ...book,
+
+                                    isActive: book.id === 1
                                 }
                             })
                         }

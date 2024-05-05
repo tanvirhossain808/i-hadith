@@ -17,7 +17,7 @@ function App() {
   const { isLoading: chapterLoading } = useGetChapterName()
   const { isLoading: getHadithLoadig } = useGetAllHadith()
   const { isLoading: getSectionLoading } = useGetSection()
-
+  console.log(data);
 
 
   return (
