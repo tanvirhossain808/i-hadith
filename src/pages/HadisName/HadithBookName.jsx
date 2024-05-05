@@ -1,7 +1,11 @@
 
+import Suchipatra from "../../components/Suchipatra/Suchipatra";
+
 const HadithBookName = () => {
+
     return (
-        <div>
+        <div className="bg-[#ffffff] w-[350px] rounded-tl-2xl  rounded-tr-2xl">
+            <Suchipatra />
 
         </div>
     );

@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import Nav from "../Nav/Nav";
 
 const Navbar = () => {
@@ -74,7 +74,7 @@ const Navbar = () => {
         }
     ]
     return (
-        <div className="flex flex-col h-[80vh] justify-between ">
+        <div className="flex flex-col w-[95px] h-[80vh] justify-between items-center">
             {
 
                 navbarIconsDetails.map(nav => <Nav key={nav.id} id={nav.id} isActive={nav.isActive} activeImg={nav.activeImg} hoverImg={nav.hoverImg} img={nav.img} name={nav.name} />)
