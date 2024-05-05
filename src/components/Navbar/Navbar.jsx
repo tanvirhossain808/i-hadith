@@ -73,6 +73,7 @@ const Navbar = () => {
             isActive: true
         }
     ]
+
     return (
         <div className="flex flex-col w-[95px] h-[80vh] justify-between items-center">
             {
