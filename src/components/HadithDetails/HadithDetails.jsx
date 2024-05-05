@@ -4,7 +4,7 @@ import { dataProvider } from '../../store/Data';
 const HadithDetails = ({ narrator, bn, sectionId, ar }) => {
     const { data: { section } } = useContext(dataProvider)
     const sectionData = section.filter((sectionNumber) => sectionNumber.section_id === sectionId)
-    console.log(sectionData);
+
 
     return (
         <>

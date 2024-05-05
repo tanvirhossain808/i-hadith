@@ -4,7 +4,6 @@ import { dataProvider } from "../../store/Data";
 
 
 const Book = ({ code, title, hadishNumber, isActive, id }) => {
-    console.log(isActive);
     const [isRowActive, setIsRowAcitve] = useState(false)
     const { setData } = useContext(dataProvider)
     const [isHover, setIsHover] = useState(false)

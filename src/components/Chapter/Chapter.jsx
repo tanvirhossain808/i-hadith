@@ -3,8 +3,6 @@ import { useState } from "react";
 
 
 const Chapter = ({ range, number, title, isActive }) => {
-
-    console.log(isActive, 'df');
     const [isRowActive, setIsRowAcitve] = useState(false)
     const [isHover, setIsHover] = useState(false)
     return (
