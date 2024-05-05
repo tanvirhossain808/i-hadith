@@ -6,7 +6,9 @@ export const dataProvider = createContext({})
 const values = {
     books: [],
     chapter: [],
-    hadith: []
+    hadith: [],
+    section: []
+
 }
 
 

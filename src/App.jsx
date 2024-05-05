@@ -7,13 +7,18 @@ import HadithBookName from './pages/HadisName/HadithBookName'
 import { dataProvider } from './store/Data'
 import useGetBookName from './hooks/useGetBooksName';
 import useGetChapterName from './hooks/useGetChapterName'
+import HadithDiscription from './components/HadithDiscription/HadithDiscription'
+import useGetAllHadith from './hooks/useGetAllHadith'
+import useGetSection from './hooks/useGetSection'
 
 function App() {
   const { data } = useContext(dataProvider)
-  console.log(data);
   const { isLoading } = useGetBookName()
   const { isLoading: chapterLoading } = useGetChapterName()
-  // console.log(isLoading);
+  const { isLoading: getHadithLoadig } = useGetAllHadith()
+  const { isLoading: getSectionLoading } = useGetSection()
+
+
 
   return (
     <>
@@ -24,10 +29,13 @@ function App() {
 
       <div className='flex'>
         <Navbar />
-        <div className="pageContainer bg-[#F2F4F6] h-80vh w-full rounded-3xl p-5">
+        <div className="pageContainer flex gap-5 bg-[#F2F4F6] h-80vh w-full rounded-3xl p-5">
           <HadithBookName />
-
+          <div className='w-full haditSection h-[82vh]  rounded-lg  overflow-y-scroll'>
+            <HadithDiscription />
+          </div>
         </div>
+
 
 
       </div>

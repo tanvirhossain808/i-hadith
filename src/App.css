@@ -9,3 +9,39 @@
 body {
   background-color: #FFFFFF;
 }
+
+/* .haditSection::-webkit-scrollbar {
+  width: 20px;
+  height: 40px;
+  color: red;
+  width of the entire scrollbar
+} */
+/* Style for the entire scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Width of the scrollbar */
+
+  height: 0px;
+  /* Height of the scrollbar */
+}
+
+/* Track (the area on which the thumb slides) */
+::-webkit-scrollbar-track {
+  height: 4px;
+  background: #f1f1f1;
+  /* Color of the track */
+}
+
+/* Handle (the draggable scrolling element) */
+::-webkit-scrollbar-thumb {
+  background: gray;
+  /* Color of the thumb */
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  height: 2px;
+  display: none;
+  /* Color of the thumb on hover */
+}
